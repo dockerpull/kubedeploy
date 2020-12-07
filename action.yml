@@ -1,0 +1,11 @@
+name: 'KubeDeploy'
+description: 'KubeDeploy'
+inputs:
+  cluster:
+    description: 'Cluster name'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.cluster }}
